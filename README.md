@@ -55,13 +55,64 @@ npm run build
 ```
 npm run lint
 ```
-
-  
-
 ### Run your unit tests
 *Tests are not really written, but you can use Jest built-in into this boilerplate. Pull requests are welcome, as well. :)*
 ```
 npm run test:unit
+```
+### Additional settings
+Please visit /src/settings.js and change the params there to suite your app. It's kinda important since `API_SERVER` will be used to contact Auth functions of your API.
+```
+APP_NAME:  "Pure Awesomeness",
+API_SERVER:  "http://192.168.10.10/api/"
+```
+### File structure
+This is pretty much the default file structure that you get from scaffolding app from `vue-cli 3`, added stuff to suit the needs of the boilerplate.
+```
+.
+|____App.vue
+|____components
+| |____globals
+| | |____ButtonSpinner
+| | | |____index.vue
+|____main.js
+|____router
+| |____index.js
+|____settings.js
+|____store
+| |____actions
+| | |____auth.js
+| | |____user.js
+| |____index.js
+| |____modules
+| | |____auth.js
+| | |____settings.js
+| | |____user.js
+|____styles
+| |____index.scss
+| |_____variables.scss
+|____utils
+| |____api.js
+|____views
+| |____auth
+| | |____login
+| | | |____img
+| | | | |____login.jpg
+| | | |____index.vue
+| | |____register
+| | | |____img
+| | | | |____register.jpg
+| | | |____index.vue
+| | | |____js
+| | | | |____imagesloaded.pkgd.min.js
+| | | | |____zxcvbn.js
+| | |____styles
+| | | |____auth-styles.scss
+| |____home
+| | |____index.vue
+| |____layouts
+| | |____App
+| | | |____index.vue
 ```
 
 ## Credits
@@ -76,3 +127,6 @@ If you like this package, please star it, fork it, I'm open for pull requests as
 -   [imagesLoaded](http://imagesloaded.desandro.com/)  by Dave DeSandro
 -   [Pixelate](http://jsfiddle.net/u6apxgfk/390/)  by Ken Fyrstenberg, Epistemex, License:  [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)
 -   [Fullscreen image in Canvas](https://codepen.io/bassta/pen/OPVzyB)  by Chrysto Panayotov
+
+## LICENSE
+MIT
