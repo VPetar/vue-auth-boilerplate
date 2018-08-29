@@ -1,5 +1,6 @@
 
 # Vue Auth Boilerplate
+[![NPM version][npm-image]][npm-url]]
 This is a starter app / boilerplate for any type of SPA application that you'd want to build with VueJS. If you use, say, Laravel / [laravel-api-boilerplate-jwt](https://github.com/francescomalatesta/laravel-api-boilerplate-jwt) (a package by # [francescomalatesta](https://github.com/francescomalatesta)), you'll feel right at home as it integrates with it's API Auth functions.
 
 ## Snapshots
