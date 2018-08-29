@@ -2,7 +2,7 @@
   "name": "vue-auth-boilerplate",
   "version": "1.0.0",
   "private": false,
-  "keywords": [],
+  "keywords": ["vue", "vuejs", "boilerplate", "starter", "spa", "laravel-jwt-template"],
   "author": "Petar Vukmanovic",
   "license": "MIT",
   "description": "A boilerplate that goes along with Laravel JWT template",
