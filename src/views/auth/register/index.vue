@@ -68,7 +68,9 @@ export default {
           this.$refs.loadingButton.stopLoading();
           this.$snack.success({
             text:
-              "Successfully registered to smartfundz.io. Please log in to continue."
+              "Successfully registered to " +
+              this.$store.getters.appName +
+              ". Please log in to continue."
           });
           this.$router.push("/");
         })
