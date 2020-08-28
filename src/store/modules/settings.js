@@ -1,4 +1,3 @@
-/* eslint-disable promise/param-names */
 import { settings } from "@/settings";
 const state = {
   appName: settings.APP_NAME

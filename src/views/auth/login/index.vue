@@ -3,31 +3,48 @@
     <main>
       <div class="content content--side">
         <header class="codrops-header uk-flex uk-flex-center">
-          <h1 class="uk-margin-remove uk-text-center">Welcome to {{ $store.getters.appName }}</h1>
+          <h1 class="uk-margin-remove uk-text-center">
+            Welcome to {{ $store.getters.appName }}
+          </h1>
           <p class="">Fill in the form and get started today!</p>
         </header>
         <div class="form">
           <div class="form__item">
             <label class="form__label" for="email">Email Address</label>
-            <input class="form__input" type="email" v-model='email' id="email">
+            <input
+              class="form__input"
+              type="email"
+              v-model="email"
+              id="email"
+            />
           </div>
           <div class="form__item">
             <label class="form__label" for="password">Password</label>
             <div class="form__input-wrap">
-              <input class="form__input" type="password" v-model="password" id="password">
+              <input
+                class="form__input"
+                type="password"
+                v-model="password"
+                id="password"
+              />
               <p class="form__password-strength" id="strength-output"></p>
             </div>
           </div>
           <div class="form__item form__item--actions">
-            <span>Don't have an account?
-              <router-link class="form__link" to="/register">Register here</router-link>
+            <span
+              >Don't have an account?
+              <router-link class="form__link" to="/register"
+                >Register here</router-link
+              >
             </span>
-            <button-spinner ref="loadingButton" @click="login();">Log in</button-spinner>
+            <button-spinner ref="loadingButton" @click="login()"
+              >Log in</button-spinner
+            >
           </div>
         </div>
       </div>
       <div class="content content--side">
-        <div class="poster" :style="'background-image:url('+ img +')'"></div>
+        <div class="poster" :style="'background-image:url(' + img + ')'"></div>
         <div class="canvas-wrap">
           <canvas></canvas>
         </div>

@@ -2,7 +2,14 @@
   "name": "vue-auth-boilerplate",
   "version": "1.0.0",
   "private": false,
-  "keywords": ["vue", "vuejs", "boilerplate", "starter", "spa", "laravel-jwt-template"],
+  "keywords": [
+    "vue",
+    "vuejs",
+    "boilerplate",
+    "starter",
+    "spa",
+    "laravel-jwt-template"
+  ],
   "author": "Petar Vukmanovic",
   "license": "MIT",
   "description": "A boilerplate that goes along with Laravel JWT template",
@@ -21,26 +28,30 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.20.0",
     "ev-emitter": "^1.1.1",
-    "lodash": "^4.17.10",
-    "uikit": "^3.0.0-rc.12",
-    "vue": "^2.5.17",
-    "vue-router": "^3.0.1",
+    "lodash": "^4.17.20",
+    "uikit": "^3.5.7",
+    "vue": "^2.6.12",
+    "vue-router": "^3.4.3",
     "vue-snack": "^0.1.4",
-    "vuex": "^3.0.1"
+    "vuex": "^3.5.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.1",
-    "@vue/cli-plugin-eslint": "^3.0.1",
-    "@vue/cli-plugin-unit-jest": "^3.0.1",
-    "@vue/cli-service": "^3.0.1",
-    "@vue/eslint-config-prettier": "^3.0.1",
-    "@vue/test-utils": "^1.0.0-beta.20",
+    "@vue/cli-plugin-babel": "^4.5.4",
+    "@vue/cli-plugin-eslint": "^4.5.4",
+    "@vue/cli-plugin-unit-jest": "^4.5.4",
+    "@vue/cli-service": "^4.5.4",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/test-utils": "^1.0.4",
     "babel-core": "7.0.0-bridge.0",
-    "babel-jest": "^23.0.1",
-    "node-sass": "^4.9.0",
-    "sass-loader": "^7.0.1",
-    "vue-template-compiler": "^2.5.17"
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.3.0",
+    "eslint": "^7.7.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-vue": "^6.2.2",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^10.0.1",
+    "vue-template-compiler": "^2.6.12"
   }
 }

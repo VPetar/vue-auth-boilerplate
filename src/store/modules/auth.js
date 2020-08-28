@@ -1,4 +1,3 @@
-/* eslint-disable promise/param-names */
 import {
   AUTH_REQUEST,
   AUTH_SIGNUP,

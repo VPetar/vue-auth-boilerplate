@@ -3,41 +3,64 @@
     <main>
       <div class="content content--side">
         <header class="codrops-header uk-flex uk-flex-center">
-          <h1 class="uk-margin-remove uk-text-center">Welcome to {{ $store.getters.appName }}</h1>
+          <h1 class="uk-margin-remove uk-text-center">
+            Welcome to {{ $store.getters.appName }}
+          </h1>
           <p class="">Fill in the form and get started today!</p>
         </header>
         <div class="form">
           <div class="form__item">
             <label class="form__label" for="email">Full Name</label>
-            <input class="form__input" type="text" v-model="name" id="name">
+            <input class="form__input" type="text" v-model="name" id="name" />
           </div>
           <div class="form__item">
             <label class="form__label" for="email">Email Address</label>
-            <input class="form__input" type="email" v-model="email" id="email">
+            <input
+              class="form__input"
+              type="email"
+              v-model="email"
+              id="email"
+            />
           </div>
           <div class="form__item">
             <label class="form__label" for="password">Password</label>
             <div class="form__input-wrap">
-              <input class="form__input" type="password" v-model="password" id="password">
+              <input
+                class="form__input"
+                type="password"
+                v-model="password"
+                id="password"
+              />
               <p class="form__password-strength" id="strength-output"></p>
             </div>
           </div>
-          <div class="uk-flex uk-flex-center uk-flex-middle uk-margin-medium-top uk-visible@s">
+          <div
+            class="uk-flex uk-flex-center uk-flex-middle uk-margin-medium-top uk-visible@s"
+          >
             <span uk-icon="icon: info; ratio: 3;"></span>
             <span class="uk-margin-left">
-              <small>We strongly recommend that you use a secure password. Best advice: when you can see the image crystal-clear, then you're good!</small>
+              <small
+                >We strongly recommend that you use a secure password. Best
+                advice: when you can see the image crystal-clear, then you're
+                good!</small
+              >
             </span>
           </div>
           <div class="form__item form__item--actions">
-            <span>Already have an account?
-              <router-link class="form__link" to="/login">Login here</router-link>
+            <span
+              >Already have an account?
+              <router-link class="form__link" to="/login"
+                >Login here</router-link
+              >
             </span>
-            <button-spinner ref="loadingButton" @click="register();">Register</button-spinner>
+            <button-spinner ref="loadingButton" @click="register()"
+              >Register</button-spinner
+            >
           </div>
         </div>
       </div>
       <div class="content content--side">
-        <div class="poster" :style="'background-image:url('+ img +')'"></div>
+        <div class="poster" :style="'background-image:url(' + img + ')'"></div>
         <div class="canvas-wrap">
           <canvas></canvas>
         </div>
@@ -83,8 +106,6 @@ export default {
     }
   },
   mounted() {
-    require("./js/imagesloaded.pkgd.min.js");
-    require("./js/zxcvbn.js");
     const passwordInput = document.querySelector("#password");
     const passwordFeedback = document.querySelector("#strength-output");
     const strengthStr = {
@@ -101,7 +122,7 @@ export default {
       .match(/\((.*?)\)/)[1]
       .replace(/('|")/g, "");
     window.imagesLoaded(poster, { background: true }, () => {
-      document.querySelector(".demo-1").classList.remove("loading");
+      // on callback, add if you deem something necessary
     });
 
     // The following code was taken and modified from http://jsfiddle.net/u6apxgfk/390/
