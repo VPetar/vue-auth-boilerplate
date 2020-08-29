@@ -72,49 +72,69 @@ API_SERVER:  "http://192.168.10.10/api/"
 This is pretty much the default file structure that you get from scaffolding app from `vue-cli 3`, added stuff to suit the needs of the boilerplate.
 ```
 .
-|____App.vue
-|____components
-| |____globals
-| | |____ButtonSpinner
+|____.browserslistrc
+|____.eslintrc.js
+|____.gitignore
+|____babel.config.js
+|____jest.config.js
+|____LICENSE
+|____package-lock.json
+|____package.json
+|____postcss.config.js
+|____public
+| |____favicon.ico
+| |____index.html
+| |____js
+| | |____imagesloaded.pkgd.min.js
+| | |____zxcvbn.js
+|____README.md
+|____src
+| |____App.vue
+| |____components
+| | |____globals
+| | | |____ButtonSpinner
+| | | | |____index.vue
+| |____main.js
+| |____router
+| | |____index.js
+| |____settings.js
+| |____store
+| | |____actions
+| | | |____auth.js
+| | | |____user.js
+| | |____index.js
+| | |____modules
+| | | |____auth.js
+| | | |____settings.js
+| | | |____user.js
+| |____styles
+| | |____index.scss
+| | |_____variables.scss
+| |____utils
+| | |____api.js
+| |____views
+| | |____auth
+| | | |____login
+| | | | |____img
+| | | | | |____login.jpg
+| | | | |____index.vue
+| | | |____register
+| | | | |____img
+| | | | | |____register.jpg
+| | | | |____index.vue
+| | | |____styles
+| | | | |____auth-styles.scss
+| | |____home
 | | | |____index.vue
-|____main.js
-|____router
-| |____index.js
-|____settings.js
-|____store
-| |____actions
-| | |____auth.js
-| | |____user.js
-| |____index.js
-| |____modules
-| | |____auth.js
-| | |____settings.js
-| | |____user.js
-|____styles
-| |____index.scss
-| |_____variables.scss
-|____utils
-| |____api.js
-|____views
-| |____auth
-| | |____login
-| | | |____img
-| | | | |____login.jpg
-| | | |____index.vue
-| | |____register
-| | | |____img
-| | | | |____register.jpg
-| | | |____index.vue
-| | | |____js
-| | | | |____imagesloaded.pkgd.min.js
-| | | | |____zxcvbn.js
-| | |____styles
-| | | |____auth-styles.scss
-| |____home
-| | |____index.vue
-| |____layouts
-| | |____App
-| | | |____index.vue
+| | |____layouts
+| | | |____App
+| | | | |____index.vue
+|____tests
+| |____unit
+| | |____.eslintrc.js
+| | |____HelloWorld.spec.js
+|____vue.config.js
+
 ```
 
 ## Credits
