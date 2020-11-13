@@ -19,7 +19,7 @@ This is a starter app / boilerplate for any type of SPA application that you'd w
 For scaffolding of this app, [vue-cli 3](https://cli.vuejs.org/guide/) has been used, meaning, you get to use latest vue-cli 3 features, like [plugins](https://cli.vuejs.org/guide/plugins-and-presets.html#plugins).
 
 ## UIkit
-It would seem that [UIkit CSS framework](https://getuikit.com/) doesn't get as much attention as it deserves. I believe it's one of the most complete frameworks out there, fun to use, awesome when you master it. This boilerplate is built has included UIKit, but you don't need to use it if you don't want to. Login and Register pages are self-contained, and contain their own style, just for this reason.
+It would seem that [UIkit CSS framework](https://getuikit.com/) doesn't get as much attention as it deserves. I believe it's one of the most complete frameworks out there, fun to use, awesome when you master it. This boilerplate is built with UIKit, but you don't need to use it if you don't want to. Login and Register pages are self-contained, and contain their own style, just for this reason.
 
 #### If you want to change and use Bootstrap:
 ```
