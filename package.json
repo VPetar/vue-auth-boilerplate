@@ -28,7 +28,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "axios": "^0.20.0",
+    "axios": "^0.21.1",
     "ev-emitter": "^1.1.1",
     "lodash": "^4.17.20",
     "uikit": "^3.5.7",
