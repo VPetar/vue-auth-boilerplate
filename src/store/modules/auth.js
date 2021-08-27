@@ -71,7 +71,6 @@ const mutations = {
     state.status = "success";
     state.token = resp.token;
     state.hasLoadedOnce = true;
-    Event.$emit("user-authenticated");
   },
   [AUTH_ERROR]: state => {
     state.status = "error";

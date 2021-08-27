@@ -1,4 +1,4 @@
-import Vue from "vue";
+import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
@@ -15,16 +15,15 @@ window._ = require("lodash");
 require("./styles/index.scss");
 require("vue-snack/dist/vue-snack.min.css");
 
-Vue.config.productionTip = false;
+// Vue.use(VueSnackbar, {});
 
-window.Event = new Vue();
+// Vue.component("button-spinner", ButtonSpinner);
 
-Vue.use(VueSnackbar, {});
+const app = createApp(App)
+  .use(router)
+  .use(router)
+  .use(store);
 
-Vue.component("button-spinner", ButtonSpinner);
+app.component("button-spinner", ButtonSpinner);
 
-new Vue({
-  router,
-  store,
-  render: h => h(App)
-}).$mount("#app");
+app.mount("#app");

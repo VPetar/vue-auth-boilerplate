@@ -1,5 +1,5 @@
 <template>
-  <div id="app uk-offcanvas-content">
+  <div id="uk-offcanvas-content">
     <div id="offcanvas-nav" ref="offcanvasMenu" uk-offcanvas="overlay: true">
       <div class="uk-offcanvas-bar">
         <h1>{{ $store.getters.appName }}</h1>

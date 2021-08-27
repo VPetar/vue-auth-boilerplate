@@ -1,5 +1,5 @@
 <template>
-  <button class="uk-button uk-button-secondary" v-on="$listeners">
+  <button class="uk-button uk-button-secondary">
     <span v-if="loading" uk-spinner="ratio: 0.7"></span>
     <span v-else>
       <slot />
