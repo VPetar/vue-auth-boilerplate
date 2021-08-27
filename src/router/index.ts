@@ -1,11 +1,11 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHistory, NavigationGuard } from "vue-router";
 import store from "../store";
-import Login from "@/views/auth/login";
-import Register from "@/views/auth/register";
-import App from "@/views/layouts/App";
-import Home from "@/views/Home";
+import Login from "@/views/auth/login/index.vue";
+import Register from "@/views/auth/register/index.vue";
+import App from "@/views/layouts/App/index.vue";
+import Home from "@/views/Home.vue";
 
-const ifNotAuthenticated = (to, from, next) => {
+const ifNotAuthenticated: NavigationGuard = (to, from, next) => {
   if (!store.getters.isAuthenticated) {
     next();
     return;
@@ -13,7 +13,7 @@ const ifNotAuthenticated = (to, from, next) => {
   next("/");
 };
 
-const ifAuthenticated = (to, from, next) => {
+const ifAuthenticated: NavigationGuard = (to, from, next) => {
   if (store.getters.isAuthenticated) {
     next();
     return;

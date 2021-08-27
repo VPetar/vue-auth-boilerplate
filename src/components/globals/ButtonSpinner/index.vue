@@ -7,20 +7,16 @@
   </button>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      loading: false
-    };
-  },
-  methods: {
-    startLoading() {
-      this.loading = true;
-    },
-    stopLoading() {
-      this.loading = false;
-    }
+<script lang="ts">
+import {  Vue } from "vue-class-component";
+export default class Home extends Vue {
+  loading = false;
+
+  startLoading() {
+    this.loading = true;
   }
-};
+  stopLoading() {
+    this.loading = false;
+  }
+}
 </script>

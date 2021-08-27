@@ -2,12 +2,17 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-import VueSnackbar from "vue-snack";
+// import VueSnackbar from "vue-snack";
 import UIkit from "uikit";
 import Icons from "uikit/dist/js/uikit-icons";
-import ButtonSpinner from "@/components/globals/ButtonSpinner";
+import ButtonSpinner from "./components/globals/ButtonSpinner/index.vue";
 UIkit.use(Icons);
 window.UIkit = UIkit;
+
+declare global {
+  var _: object;
+  var UIkit: object;
+}
 
 // loads the Icon plugin
 window._ = require("lodash");

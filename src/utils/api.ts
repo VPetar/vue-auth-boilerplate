@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, {AxiosRequestConfig, Method} from "axios";
 import { settings } from "@/settings";
 
 const API_SERVER = settings.API_SERVER;
@@ -11,13 +11,12 @@ export const api_routes = {
   }
 };
 
-export const apiCall = ({ url, method, ...args }) =>
+export const apiCall = ({ url, method, ...args }: {url: string, method?: Method, data?: object}) =>
   new Promise((resolve, reject) => {
     let token = localStorage.getItem("user-token") || "";
 
     if (token)
       axios.defaults.headers.common["Authorization"] = "Bearer " + token;
-
     try {
       axios({
         method: method || "get",
@@ -30,7 +29,7 @@ export const apiCall = ({ url, method, ...args }) =>
         .catch(error => {
           reject(error);
         });
-    } catch (err) {
+    } catch (err: any) {
       reject(new Error(err));
     }
   });

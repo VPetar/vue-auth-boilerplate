@@ -1,10 +1,15 @@
 import { settings } from "@/settings";
-const state = {
+
+interface Settings {
+  appName: string
+}
+
+const state = <Settings>{
   appName: settings.APP_NAME
 };
 
 const getters = {
-  appName: state => state.appName
+  appName: (state: Settings) => state.appName
 };
 
 const actions = {};

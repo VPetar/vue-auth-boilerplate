@@ -1,15 +1,25 @@
 import { USER_REQUEST, USER_ERROR, USER_SUCCESS } from "../actions/user";
 import { apiCall, api_routes } from "@/utils/api";
 import { AUTH_LOGOUT } from "../actions/auth";
+import { ActionTree } from 'vuex'
 
-const state = { status: "", profile: {} };
+interface Profile {
+  name?: string
+}
+
+interface User {
+  status: string,
+  profile: Profile
+}
+
+const state: User = { status: "", profile: {} };
 
 const getters = {
-  getProfile: state => state.profile,
-  isProfileLoaded: state => !!state.profile.name
+  getProfile: (state: User) => state.profile,
+  isProfileLoaded: (state: User) => !!state.profile.name
 };
 
-const actions = {
+const actions = <ActionTree<User, any>> {
   [USER_REQUEST]: ({ commit, dispatch }) => {
     commit(USER_REQUEST);
     apiCall({ url: api_routes.user.me })
@@ -26,17 +36,17 @@ const actions = {
 };
 
 const mutations = {
-  [USER_REQUEST]: state => {
+  [USER_REQUEST]: (state: User) => {
     state.status = "loading";
   },
-  [USER_SUCCESS]: (state, resp) => {
+  [USER_SUCCESS]: (state: User, profile: Profile) => {
     state.status = "success";
-    state.profile = resp;
+    state.profile = profile;
   },
-  [USER_ERROR]: state => {
+  [USER_ERROR]: (state: User) => {
     state.status = "error";
   },
-  [AUTH_LOGOUT]: state => {
+  [AUTH_LOGOUT]: (state: User) => {
     state.profile = {};
   }
 };

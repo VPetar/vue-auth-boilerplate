@@ -4,10 +4,10 @@
   </div>
 </template>
 
-<script>
-// @ is an alias to /src
+<script lang="ts">
+import { Options, Vue } from "vue-class-component";
 
-export default {
-  name: "Home",
-};
+@Options({
+})
+export default class Home extends Vue {}
 </script>
